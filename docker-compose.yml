@@ -1,13 +1,13 @@
 version: '3.2'
 
 services:
-  server:
-    build: server
-    ports:
-      - 8080:8080
-    volumes:
-      - ./server/app:/app
-  tailer:
+  # server:
+  #   build: server
+  #   ports:
+  #     - 8080:8080
+  #   volumes:
+  #     - ./server/app:/app
+  supernats:
     build:
       context: .
       x-bake:
