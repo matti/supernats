@@ -50,6 +50,10 @@ func main() {
 
 	flag.Parse()
 
+	if natsUrl == "" {
+		log.Fatalln("url required")
+	}
+
 	wg := &sync.WaitGroup{}
 
 	wg.Add(1)
