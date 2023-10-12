@@ -30,8 +30,9 @@ loop do
   stdin.puts counter.to_s
 
   puts counter
-  sleep 1
-rescue Errno::EPIPE
+  sleep 0.1
+rescue Errno::EPIPE => ex
+  pp [:ex, ex]
   sleep 1
   retry
 end
