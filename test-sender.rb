@@ -36,12 +36,3 @@ rescue Errno::EPIPE => ex
   sleep 1
   retry
 end
-
-# line = stdout.gets
-# exitstatus = thread&.value&.exitstatus
-# if exitstatus == 0
-#   return [true, line]
-# else
-#   warn "subito exit: #{exitstatus}"
-#   return [false, nil]
-# end
